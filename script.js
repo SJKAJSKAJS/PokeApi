@@ -14,13 +14,15 @@ async function fetchAllPokemon() {
 function renderPokemonList(pokemonArray) {
   pokemonListDiv.innerHTML = '';
   pokemonArray.forEach(pokemon => {
-
+    const id = pokemon.url.split('/')[6];
+    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 
     const col = document.createElement('div');
     col.className = 'col';
     col.innerHTML = `
       <div class="card h-200 text-center shadow">
-
+        <p class="texto">ID: ${id}</p>
+        <img src="${imageUrl}" class="card-img-top mx-auto mt-3" style="width: 200px;" alt="${pokemon.name}">
         <div class="card-body">
           <h5 class="card-title text-capitalize">${pokemon.name}</h5>
           <button class="btn btn-primary" onclick="fetchPokemonDetails('${pokemon.url}')">Ver detalles</button>
