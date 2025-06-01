@@ -1,0 +1,9 @@
+.margen
+{
+  background-color: rgb(237, 100, 100);
+}
+
+body{
+  background-color: rgb(237, 100, 100);
+  margin: 10px;
+}
