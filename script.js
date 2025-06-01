@@ -53,12 +53,11 @@ const typesFormatted = data.types.map(t => {
 
 detailsDiv.innerHTML = `
   <div class="position-fixed top-0 end-0 vh-100 bg-light p-3" style="width: 400px; overflow-y: scroll;">
-    <div class="card shadow mt-5">
       <div class="card-body">
           
-      <button class="btn btn-danger mb-3" onclick="closeDetails()"> X </button>
+      <button class="btn btn-danger mb-3 texto  d-flex justify-content-end" onclick="closeDetails()"> X </button>
 
-        <h2 class="card-title text-capitalize">${data.name}</h2>
+        <h2 class="card-title text-capitalize text-center">${data.name}</h2>
         <img src="${sprite}" alt="${data.name}" class="mb-3" style="width: 300px;">
 
 
